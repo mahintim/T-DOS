@@ -1,0 +1,76 @@
+ _____     ____   ___  ____  
+|_   _|   |  _ \ / _ \/ ___|
+  | |_____| | | | | | \___ \
+  | |_____| |_| | |_| |___) |
+  |_|     |____/ \___/|____/
+
+
+==== Description ====
+T-DOS is a general purpose 16-bit operating system for IBM XT compatible PCs.
+It is planned to support multitasking and working with files, as well as
+driver support.
+
+
+==== Repo's file tree ====
+(`+` - directory,  `=` - file, `-` - file is missing in repo, but will be
+  created by build script)
+
+ + BIN         Binary files
+   - BOOT.B    Bootloader binary
+   - DISK.B    Disk image
+
+ + BOOT        Bootloader's source code.
+   = MAIN.S    Main bootloader's source file.
+
+ + DISASM      Disassembled binaries (for debugging).
+   - MAIN.S    Dissasembled bootloader.
+   - KERNEL.S  Dissasembled kernel.
+
+ + MOUNT       TFS mount point.
+   - KERNEL.X  Kernel's executable file.
+
+ + py           Python scripts.
+   = mkfs_tfs.py Format disk with TFS.
+   = mnt_tfs.py Mount/dismount TFS.
+
+ = makefile     Build on *nix.
+
+
+==== Build and run ====
+List of programs for building:
+ - NASM (https://www.nasm.us/)
+ - python3 (https://www.python.org/)
+
+List of programs for running:
+ - QEMU (https://www.qemu.org/)
+
+For *nix:
+        make all
+
+For Windows:
+        build.bat all
+
+
+==== Status ====
+Current version: v0001 (2019).
+Work in progress!
+
+List of things to do (`+` means done):
+
+ + Disk formatting with TFS.
+ + TFS mount/dismount.
+ + Bootloader.
+ - Multitasking.
+ - Files and other IO.
+ - Byte streams for files and buffers.
+ - Drivers support.
+ - Command prompt.
+ - TFS, T-DOS API and command prompt documentation.
+
+
+==== License ====
+See `LICENSE`.
+
+
+==== Authors ====
+Timur Salomakhin Evgenievich (mahin.tim@gmail.com).

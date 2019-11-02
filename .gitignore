@@ -1,0 +1,4 @@
+DISASM/*.S
+BIN/*.B
+MOUNT/*.*
+!MOUNT/.gitkeep
