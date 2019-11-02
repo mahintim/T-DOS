@@ -10,8 +10,10 @@
 [ORG $800]
 
 KERNEL_START:
-	mov	ax, $0E45
+	;Print 'T' on the screen;
+	mov	ax, $0E54
 	int	$10
+	;====
 
 KERNEL_END:
 	hlt
