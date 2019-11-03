@@ -32,11 +32,16 @@ BAD_FS_ERR	EQU	'03'
 
 ;Bootloader;
 ;IN:
-;	DL = boot device number;
+;	DL - boot device number;
 ;OUT:
-;	[$800-?] = kernel file;
-;	PC = 0:$800;
-;	DL = boot device number;
+;	[$800-?] - kernel file;
+;	PC - 0:$800;
+;	AX - cylinders number;
+;	BH - sectors number;
+;	BL - heads number;
+;	DL - boot device number;
+;	BP - version of TFS;
+;	SI:DI - number of sectors;
 BOOT:
 	;Setting segment registers and stack;
 	cli
@@ -205,10 +210,14 @@ LOAD_KERNEL_ERR:
 	jmp	ERROR
 
 RUN_KERNEL:
-	mov	cl, [DRIVE_NUM]
-	mov	ax, [TFS_SECTORS]
-	mov	dx, [TFS_SECTORS + 2]
-	mov	bx, [TFS_VERSION]
+	mov	ax, [CYLINDERS]
+	mov	bh, [SECTORS]
+	mov	bl, [HEADS]
+	mov	dl, [DRIVE_NUM]
+
+	mov	bp, [TFS_VERSION]
+	mov	di, [TFS_SECTORS]
+	mov	si, [TFS_SECTORS+2]
 	jmp	0:KERNEL
 ;==== ==== ====
 
