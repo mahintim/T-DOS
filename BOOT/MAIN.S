@@ -34,8 +34,8 @@ BAD_FS_ERR	EQU	'03'
 ;IN:
 ;	DL - boot device number;
 ;OUT:
-;	[$800-?] - kernel file;
-;	PC - 0:$800;
+;	[$900-?] - kernel file;
+;	PC - 0:$900;
 ;	AX - cylinders number;
 ;	BH - sectors number;
 ;	BL - heads number;
