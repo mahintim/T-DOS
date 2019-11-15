@@ -48,7 +48,7 @@ For *nix:
         make all
 
 For Windows:
-        build.bat all
+        build.bat
 
 
 ==== Status ====
