@@ -30,6 +30,7 @@ FREE_MEM	EQU	SYS_STACK+SYS_STACK_SIZE
 ;Including other source files;
 %INCLUDE "KERNEL/ERRORS.S"
 %INCLUDE "KERNEL/TASK.S"
+%INCLUDE "KERNEL/IO.S"
 ;==== ==== ====
 
 
