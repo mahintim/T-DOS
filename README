@@ -55,12 +55,12 @@ For Windows:
 Current version: v0001 (2019).
 Work in progress!
 
-List of things to do (`+` means done):
+List of things to do (`+` means done, `+\-` means work in progress):
 
  + Disk formatting with TFS.
  + TFS mount/dismount.
  + Bootloader.
- - Multitasking.
+ +\- Multitasking.
  - Files and other IO.
  - Byte streams for files and buffers.
  - Drivers support.
