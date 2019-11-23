@@ -1,5 +1,5 @@
 ;========================================;
-;#	MAIN.S - Task service;		#;
+;#	MAIN.S - multitasking module;	#;
 ;#	By Timur Salomakhin;		#;
 ;#	mahin.tim@gmail.com;		#;
 ;#	See README and LICENSE;		#;
@@ -349,7 +349,7 @@ AUX_TASK_LEAVE:
 	mov	cx, [cs:MAIN_TASK_CX]
 	mov	dx, [cs:MAIN_TASK_DX]
 	mov	si, [cs:MAIN_TASK_SI]
-	mov	si, [cs:MAIN_TASK_DI]
+	mov	di, [cs:MAIN_TASK_DI]
 	mov	bp, [cs:MAIN_TASK_BP]
 	;====
 
