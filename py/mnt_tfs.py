@@ -91,7 +91,7 @@ class Entry:
 
         for c in name:
             if not (c in allowed):
-                raise ValueError("Found deprecated character '" + str(c) + "' in name '" + str(name) + "'.")
+                raise ValueError("Character '" + str(c) + "' in name '" + str(name) + "' is not allowed by TFS.")
 
         return name.decode("utf-8").rstrip("\0")
 
