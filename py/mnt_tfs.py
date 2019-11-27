@@ -130,7 +130,7 @@ class Entry:
     def delete(self):
         """ Delete entry from disk. """
         self.disk.seek_to_sector(self.parent_dir.entry.sector)
-        self.parent_dir.entries[self.parent_dir.entries.index(self)].name = " "
+        self.parent_dir.entries[self.parent_dir.entries.index(self)].name = ""
 
         if self.size == 0xFFFFFFFF:
             Directory(self).delete_data()
